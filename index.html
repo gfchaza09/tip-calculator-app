@@ -8,17 +8,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./css/images/favicon-32x32.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet"/>
     <title>Frontend Mentor | Tip calculator app</title>
-  
-    <style>
-      .attribution { font-size: 11px; text-align: center;}
-      .attribution a { color: hsl(228, 45%, 44%);}
-    </style>
+
   </head>
   <body>
 	<!-- TITLE -->
     <header>
-      <h3>SPLI</h3>
-      <h3>TTER</h3>
+      <h2>SPLI</h2>
+      <h2>TTER</h2>
     </header>
 
   <!-- desktop & mobile design -->
@@ -28,49 +24,48 @@
         <div class="flex-container container-left flex-left">
           <!-- desktop & mobile bill box -->
           <div class="desktop-item-left flex-item-left bill-box">
-            <label class="subtitle">
-              Bill <input type="text" class="desktop-input__bill left-input__bill bill" name="bill" placeholder="0" />
-            </label>
+            <label class="subtitle" for="bill">Bill</label>
+            <input type="text" class="desktop-input__bill left-input__bill" id="bill" name="bill" placeholder="0" />
             <!-- <h4 class="subtitle error" id="error-bill">Can't be negative</h4> -->
           </div>
           <!-- desktop & mobile tip box -->
           <div class="desktop-item-left flex-item-left tip-box">
-            <label class="subtitle">
-              Select Tip %
-              <div class="flex-container-button"> 
-                <button class="tip-button" id = "button5">5%</button> 
-                <button class="tip-button" id = "button10">10%</button> 
-                <button class="tip-button" id = "button15">15%</button> 
-                <button class="tip-button" id = "button25">25%</button> 
-                <button class="tip-button" id = "button50">50%</button> 
-                <input class="tip-button input-tip button-custom"type="text"name="tip-custom" placeholder="Custom" />
-              </div>
-            </label>
+            <label class="subtitle" for="button5">Select Tip %</label>
+            <div class="flex-container-button"> 
+              <button class="tip-button" id = "button5">5%</button> 
+              <button class="tip-button" id = "button10">10%</button> 
+              <button class="tip-button" id = "button15">15%</button> 
+              <button class="tip-button" id = "button25">25%</button> 
+              <button class="tip-button" id = "button50">50%</button> 
+              <input class="tip-button input-tip button-custom"type="text"name="tip-custom" placeholder="Custom" />
+            </div>
           </div>
          <!--  desktop & mobile people box -->
           <div class="desktop-item-left flex-item-left people-box">
-            <label>
-              <p class="subtitle" id="subtitle-people">Number of People</p>
+            <label class="subtitle" for="people">Number of People</label>
               <p class="subtitle error" id="error-persons"></p>
-              <input type="text" class="desktop-input__person left-input__person persons" name="number-people" placeholder="0" />
+              <input type="text" class="desktop-input__person left-input__person" id="people" name="number-people" placeholder="0" />
             </label>
           </div>
         </div>
     
        <!--  desktop & mobile total box -->
         <div class="flex-container flex-right container-right total-box">
-          <label class=container-subtitle>
-            <h4 class="total-box__subtitle">Tip Amount</h4>
-            <h6 class="total-box__subtitle2">/ person</h6>
+          <div class="container-result">
+            <div class="container-subtitle">
+              <p class="total-box__subtitle">Tip Amount</p>
+              <p class="total-box__subtitle2">/ person</p>
+            </div>
             <input class="tip-amount total-box__input" type="text" name="tip-amount" disabled value="$0.00" />
-          </label>
+          </div>
     
-          <label class=container-subtitle>
-            <h4 class="total-box__subtitle">Total</h4>
-            <h6 class="total-box__subtitle2">/ person</h6>
+          <div class="container-result">
+            <div class="container-subtitle">
+              <p class="total-box__subtitle">Total</p>
+              <p class="total-box__subtitle2">/ person</p>
+            </div>
             <input class="total total-box__input" type="text" name="total" disabled value="$0.00" />
-          </label>
-          
+          </div>
           <button class="button-reset btn-disable" type="reset">RESET</button> 
         </div>
       </div>

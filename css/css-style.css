@@ -5,12 +5,16 @@
 
 body {
 	background: hsl(185, 41%, 84%);
-	max-width: 1440px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 	/*TITLE*/
 
-h3 {
+h2 {
 	margin-bottom: 0.5em;
 	letter-spacing: 10px;
 }
@@ -18,10 +22,14 @@ h3 {
 header {
 	color: hsl(183, 100%, 15%);
 	text-align: center;
-	margin-top: 100px;
 }
 
 /*--------------------------------------*/
+
+main {
+	max-width: 1440px;
+	margin: 0px auto;
+}
 
 .subtitle {
 	color: hsl(186, 14%, 43%);
@@ -32,19 +40,17 @@ header {
 }
 
 .total-box__subtitle {
-	position: absolute;
 	color: hsl(0, 0%, 100%);
 	margin-bottom: 4px;
-	font-size: 12px;
-	font-weight: 500;
-	z-index: 10;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	/* font-weight: 500; Corregir */
 }
 
 .total-box__subtitle2 {
-	position: absolute;
 	color: hsl(186, 14%, 43%);
-	bottom: -30px;
-	left: 0;
+	font-size: 12px;
+	letter-spacing: 0.5px;
 }
 
 .flex-container-desktop {
@@ -52,31 +58,30 @@ header {
 	flex-wrap: wrap;
 	background: hsl(0, 0%, 100%);
 	border-radius: 15px;
-	margin: 50px auto 100px;
+	max-width: 800px;
+	margin: 50px auto 200px;
 	padding: 20px;
-	width: 70%;
-	height: 40%;
 }
 
 .flex-container {
 	background: hsl(0, 0%, 100%);
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	flex: 1 0 250px;
 	min-width: 200px;
-	max-height: 340px;
-	padding: 10px;
+	padding: 1rem;
 }
 
 .container-right {
+	justify-content: space-between;
 	background: hsl(183, 100%, 15%);
 	border-radius: 10px;
-	padding: 0px 30px 10px;
+	padding: 0px 40px 40px;
 }
 
 .desktop-item-left {
 	background: hsl(0, 0%, 100%);
-	padding: 5px;
 }
 
 .desktop-input__bill {
@@ -115,11 +120,11 @@ header {
 }
 
 .flex-container-button {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1 fr);
+	justify-items: center;
+	gap: 10px;
 }
 
 .tip-button {
@@ -131,10 +136,9 @@ header {
 	border: none;
 	border-radius: 5px;
 	text-align: center;
-	width: 30%;
+	width: 100%;
 	min-width: 75px;
 	padding: 8px;
-	margin: 4px;
 }
 
 .input-tip {
@@ -154,8 +158,14 @@ header {
 	text-align: center;
 }
 
+.container-result {
+	display: flex;
+	justify-content: space-between;
+	
+}
+
 .container-subtitle {
-	position: relative;
+	min-width: 100px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
@@ -169,12 +179,6 @@ header {
 	width: 70%;
 }
 
-.total-box__input {
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
 .button-select {
 	background-color: hsl(172, 67%, 45%);
 	color: hsl(183, 100%, 15%);
@@ -186,7 +190,6 @@ header {
 	border-radius: 5px;
 	width: 100%;
 	padding: 10px;
-	margin-top: 80px;
 }
 
 .btn-disable {
@@ -200,6 +203,17 @@ header {
 .btn-able:hover {
 	cursor: pointer;
 }
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+}
+
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%);}
 
 /* -----------------------------------------ERRORES-------------------------------- */
 
@@ -227,18 +241,18 @@ header {
 	box-shadow: 0px 0px 3px 2px #ff9e81;
 }
 
-@media only screen and (max-width: 475px) {
+@media screen and (max-width:768px) {
+
+	.flex-container-button {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+}
+
+@media screen and (max-width: 480px) {
 	
 	header {
 		margin-top: 50px;
-	}
-
-	.flex-container-desktop {
-		width: 300px;
-	}
-
-	.tip-button {
-		width: 100px;
 	}
 
 	.container-right {
@@ -247,7 +261,7 @@ header {
 }
 
 
-@media only screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
 	
 	/*MOBILE CSS DESIGN*/
 
@@ -261,20 +275,26 @@ header {
 
 	.flex-container-mobile {
 		margin: 30px 0 100px;
-		padding: 15px;
+		padding: 1.5rem;
 		min-width: 100%;
 	}
 
 	.flex-left {
-		padding: 0px;
+		padding: 0.5rem;
 	}
 
-	.flex-item-left {
-		margin: 10px 10px;
+	.subtitle {
+		font-size: 14px;
+		letter-spacing: 0.5px;
+		margin: 0px;
+	}
+
+	.tip-box .subtitle {
+		margin-bottom: 1rem;
 	}
 
 	.total-box {
-		margin: 90px 10px 10px;
+		margin: 70px 0px 10px;
 		padding: 20px;
 	}
 
@@ -286,16 +306,16 @@ header {
 	}
 
 	.flex-container-button {
-		min-width: 240px;
-	}
-
-	.tip-button {
-		width: 45%;
-		margin: 6px;
+		gap: .9rem;
 	}
 
 	.container-subtitle {
 		margin-top: 25px;
+	}
+
+	.total-box__subtitle {
+		font-size: 14px;
+		letter-spacing: 0.5px;
 	}
 
 	.tip-amount, .total {

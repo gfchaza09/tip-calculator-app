@@ -56,9 +56,9 @@ const validateTip = () => {
 	}
 }
 
-const inputBill = document.querySelector(".bill");
+const inputBill = document.getElementById("bill");
 
-const inputPersons = document.querySelector(".persons");
+const inputPersons = document.getElementById("people");
 
 const button5 = document.getElementById("button5");
 const button10 = document.getElementById("button10");
