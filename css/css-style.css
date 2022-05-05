@@ -1,0 +1,308 @@
+* {
+	font-family: 'Space Mono', monospace;
+	font-weight: bold;
+}
+
+body {
+	background: hsl(185, 41%, 84%);
+	max-width: 1440px;
+}
+
+	/*TITLE*/
+
+h3 {
+	margin-bottom: 0.5em;
+	letter-spacing: 10px;
+}
+
+header {
+	color: hsl(183, 100%, 15%);
+	text-align: center;
+	margin-top: 100px;
+}
+
+/*--------------------------------------*/
+
+.subtitle {
+	color: hsl(186, 14%, 43%);
+	font-size: 12px;
+	margin-bottom: 8px;
+	display: inline-block;
+	width: 100%;
+}
+
+.total-box__subtitle {
+	position: absolute;
+	color: hsl(0, 0%, 100%);
+	margin-bottom: 4px;
+	font-size: 12px;
+	font-weight: 500;
+	z-index: 10;
+}
+
+.total-box__subtitle2 {
+	position: absolute;
+	color: hsl(186, 14%, 43%);
+	bottom: -30px;
+	left: 0;
+}
+
+.flex-container-desktop {
+	display: flex;
+	flex-wrap: wrap;
+	background: hsl(0, 0%, 100%);
+	border-radius: 15px;
+	margin: 50px auto 100px;
+	padding: 20px;
+	width: 70%;
+	height: 40%;
+}
+
+.flex-container {
+	background: hsl(0, 0%, 100%);
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 250px;
+	min-width: 200px;
+	max-height: 340px;
+	padding: 10px;
+}
+
+.container-right {
+	background: hsl(183, 100%, 15%);
+	border-radius: 10px;
+	padding: 0px 30px 10px;
+}
+
+.desktop-item-left {
+	background: hsl(0, 0%, 100%);
+	padding: 5px;
+}
+
+.desktop-input__bill {
+	background: #ebebeb url('./images/icon-dollar.svg') no-repeat 6px 6px;
+}
+
+.desktop-input__person {
+	background: #ebebeb url('./images/icon-person.svg') no-repeat 6px 6px;
+}
+
+.desktop-input__bill, .desktop-input__person {
+	color: hsl(183, 100%, 15%);
+	border: 0;
+	border-radius: 2.5px;
+	text-align: right;
+	margin-top: 10px;
+	padding: 14px;
+	width: 100%;
+	height: 30px;
+	font-size: 16px;
+	caret-color: #5baba2;
+}
+
+.desktop-input__bill:hover, .desktop-input__person:hover, 
+.tip-button:hover { 
+	cursor: pointer;
+}
+
+.desktop-input__bill:focus, .desktop-input__person:focus { 
+	outline: none;
+	box-shadow: 0px 0px 3px 2px #5baba2;
+}
+
+.tip-box {
+	margin: 20px 0;
+}
+
+.flex-container-button {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.tip-button {
+	font-family: 'Space Mono', monospace;
+	font-size: 16px;
+	font-weight: 600;
+	background: hsl(183, 100%, 15%);
+	color:hsl(0, 0%, 100%);
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	width: 30%;
+	min-width: 75px;
+	padding: 8px;
+	margin: 4px;
+}
+
+.input-tip {
+	background-color: #ebebeb;
+	color: hsl(183, 100%, 15%);
+	border-radius: 5px;
+	caret-color: #5baba2;
+}
+
+.input-tip::placeholder {
+	color: hsl(183, 100%, 15%);
+}
+
+.input-tip:focus {
+	outline: none;
+	box-shadow: 0px 0px 3px 2px #5baba2;
+	text-align: center;
+}
+
+.container-subtitle {
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.tip-amount, .total {
+	background-color: hsl(183, 100%, 15%);
+	color:hsl(172, 67%, 45%);
+	font-size: 30px;
+	border: none;
+	text-align: right;
+	width: 70%;
+}
+
+.total-box__input {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.button-select {
+	background-color: hsl(172, 67%, 45%);
+	color: hsl(183, 100%, 15%);
+}
+
+.button-reset {
+	color: hsl(183, 100%, 15%);
+	border: none;
+	border-radius: 5px;
+	width: 100%;
+	padding: 10px;
+	margin-top: 80px;
+}
+
+.btn-disable {
+	background-color: #9fe8df;
+}
+
+.btn-able {
+	background-color: hsl(172, 67%, 45%);
+}
+
+.btn-able:hover {
+	cursor: pointer;
+}
+
+/* -----------------------------------------ERRORES-------------------------------- */
+
+#subtitle-people {
+	width: 55%
+}
+
+#error-persons {
+	display: block;
+	float: right;
+	width: 45%;
+}
+
+.subtitle.error {
+	color: #ff9e81;
+	float: right;
+	margin-top: 5px;
+}
+
+.input-error {
+	box-shadow: 0px 0px 3px 2px #ff9e81;
+}
+
+.input-error:focus {
+	box-shadow: 0px 0px 3px 2px #ff9e81;
+}
+
+@media only screen and (max-width: 475px) {
+	
+	header {
+		margin-top: 50px;
+	}
+
+	.flex-container-desktop {
+		width: 300px;
+	}
+
+	.tip-button {
+		width: 100px;
+	}
+
+	.container-right {
+		margin-top: 40px; 
+	}
+}
+
+
+@media only screen and (max-width: 375px) {
+	
+	/*MOBILE CSS DESIGN*/
+
+	/*TITLE*/
+
+	header {
+		margin-top: 40px;
+	}
+
+	/*----------------------------------------*/
+
+	.flex-container-mobile {
+		margin: 30px 0 100px;
+		padding: 15px;
+		min-width: 100%;
+	}
+
+	.flex-left {
+		padding: 0px;
+	}
+
+	.flex-item-left {
+		margin: 10px 10px;
+	}
+
+	.total-box {
+		margin: 90px 10px 10px;
+		padding: 20px;
+	}
+
+	.left-input__bill, .left-input__person {
+    	background-position: 15px 15px;
+		height: 51px;
+		font-size: 20px;
+		min-width: 240px;
+	}
+
+	.flex-container-button {
+		min-width: 240px;
+	}
+
+	.tip-button {
+		width: 45%;
+		margin: 6px;
+	}
+
+	.container-subtitle {
+		margin-top: 25px;
+	}
+
+	.tip-amount, .total {
+		font-size: 25px;
+	}
+
+	.button-reset {
+		margin-top: 40px;
+	}
+}

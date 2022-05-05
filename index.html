@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/css-style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./css/images/favicon-32x32.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet"/>
+    <title>Frontend Mentor | Tip calculator app</title>
+  
+    <style>
+      .attribution { font-size: 11px; text-align: center;}
+      .attribution a { color: hsl(228, 45%, 44%);}
+    </style>
+  </head>
+  <body>
+	<!-- TITLE -->
+    <header>
+      <h3>SPLI</h3>
+      <h3>TTER</h3>
+    </header>
+
+  <!-- desktop & mobile design -->
+    <main>
+      <div class="flex-container-desktop flex-container-mobile">
+        
+        <div class="flex-container container-left flex-left">
+          <!-- desktop & mobile bill box -->
+          <div class="desktop-item-left flex-item-left bill-box">
+            <label class="subtitle">
+              Bill <input type="text" class="desktop-input__bill left-input__bill bill" name="bill" placeholder="0" />
+            </label>
+            <!-- <h4 class="subtitle error" id="error-bill">Can't be negative</h4> -->
+          </div>
+          <!-- desktop & mobile tip box -->
+          <div class="desktop-item-left flex-item-left tip-box">
+            <label class="subtitle">
+              Select Tip %
+              <div class="flex-container-button"> 
+                <button class="tip-button" id = "button5">5%</button> 
+                <button class="tip-button" id = "button10">10%</button> 
+                <button class="tip-button" id = "button15">15%</button> 
+                <button class="tip-button" id = "button25">25%</button> 
+                <button class="tip-button" id = "button50">50%</button> 
+                <input class="tip-button input-tip button-custom"type="text"name="tip-custom" placeholder="Custom" />
+              </div>
+            </label>
+          </div>
+         <!--  desktop & mobile people box -->
+          <div class="desktop-item-left flex-item-left people-box">
+            <label>
+              <p class="subtitle" id="subtitle-people">Number of People</p>
+              <p class="subtitle error" id="error-persons"></p>
+              <input type="text" class="desktop-input__person left-input__person persons" name="number-people" placeholder="0" />
+            </label>
+          </div>
+        </div>
+    
+       <!--  desktop & mobile total box -->
+        <div class="flex-container flex-right container-right total-box">
+          <label class=container-subtitle>
+            <h4 class="total-box__subtitle">Tip Amount</h4>
+            <h6 class="total-box__subtitle2">/ person</h6>
+            <input class="tip-amount total-box__input" type="text" name="tip-amount" disabled value="$0.00" />
+          </label>
+    
+          <label class=container-subtitle>
+            <h4 class="total-box__subtitle">Total</h4>
+            <h6 class="total-box__subtitle2">/ person</h6>
+            <input class="total total-box__input" type="text" name="total" disabled value="$0.00" />
+          </label>
+          
+          <button class="button-reset btn-disable" type="reset">RESET</button> 
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.linkedin.com/in/gabriel-chazarreta/" target="_blank">Gabriel Chazarreta</a>.
+      </div>
+    </footer>
+    <script src="js/tip-code.js"></script>
+  </body>
+</html>
