@@ -3,10 +3,16 @@
   <head>
   	<meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
     <link rel="stylesheet" type="text/css" href="css/css-style.css"/>
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+
     <link rel="icon" type="image/png" sizes="32x32" href="./css/images/favicon-32x32.png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    
     <title>Frontend Mentor | Tip calculator app</title>
 
   </head>
@@ -26,7 +32,7 @@
           <div class="desktop-item-left flex-item-left bill-box">
             <label class="subtitle" for="bill">Bill</label>
             <input type="text" class="desktop-input__bill left-input__bill" id="bill" name="bill" placeholder="0" />
-            <!-- <h4 class="subtitle error" id="error-bill">Can't be negative</h4> -->
+            <!-- <p class="subtitle error" id="error-bill">Can't be negative</p> -->
           </div>
           <!-- desktop & mobile tip box -->
           <div class="desktop-item-left flex-item-left tip-box">
@@ -51,20 +57,22 @@
     
        <!--  desktop & mobile total box -->
         <div class="flex-container flex-right container-right total-box">
-          <div class="container-result">
-            <div class="container-subtitle">
-              <p class="total-box__subtitle">Tip Amount</p>
-              <p class="total-box__subtitle2">/ person</p>
+          <div>
+            <div class="container-result">
+              <div class="container-subtitle">
+                <p class="total-box__subtitle">Tip Amount</p>
+                <p class="total-box__subtitle2">/ person</p>
+              </div>
+              <input class="tip-amount total-box__input" type="text" name="tip-amount" disabled value="$0.00" />
             </div>
-            <input class="tip-amount total-box__input" type="text" name="tip-amount" disabled value="$0.00" />
-          </div>
-    
-          <div class="container-result">
-            <div class="container-subtitle">
-              <p class="total-box__subtitle">Total</p>
-              <p class="total-box__subtitle2">/ person</p>
+      
+            <div class="container-result">
+              <div class="container-subtitle">
+                <p class="total-box__subtitle">Total</p>
+                <p class="total-box__subtitle2">/ person</p>
+              </div>
+              <input class="total total-box__input" type="text" name="total" disabled value="$0.00" />
             </div>
-            <input class="total total-box__input" type="text" name="total" disabled value="$0.00" />
           </div>
           <button class="button-reset btn-disable" type="reset">RESET</button> 
         </div>
