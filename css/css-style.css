@@ -57,9 +57,8 @@ main {
 
 .flex-container-desktop {
 	display: flex;
-	flex-wrap: wrap;
 	background: hsl(0, 0%, 100%);
-	border-radius: 15px;
+	border-radius: 1rem;
 	max-width: 800px;
 	margin: 50px auto 200px;
 	padding: 1.75rem;
@@ -254,20 +253,53 @@ footer {
 
 @media screen and (max-width:768px) {
 
+	* {
+		letter-spacing: 0px;
+	}
+
+	body {
+		height: auto;
+	}
+
+	header {
+		margin-top: 50px;
+	}
+
+	.flex-container-mobile {
+		flex-direction: column;
+		margin: 50px auto;
+	}
+
+	.flex-container {
+		height: auto;
+	}
+
+	.container-left {
+		padding: 1rem;
+	}
+
+	.flex-item-left {
+		margin-bottom: 1.75rem;
+	}
+
 	.flex-container-button {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	footer {
+		position: relative;
 	}
 
 }
 
 @media screen and (max-width: 480px) {
-	
-	header {
-		margin-top: 50px;
-	}
 
 	.container-right {
-		margin-top: 40px; 
+		padding: 0rem 2rem 2rem;
+	}
+
+	.total-box__input {
+		font-size: 2.25rem;
 	}
 }
 
@@ -304,14 +336,16 @@ footer {
 	}
 
 	.total-box {
-		margin: 70px 0px 10px;
-		padding: 20px;
+		margin: 0px;
+		padding: 1.5rem;
+		height: 200px;
+		border-radius: 1rem;
 	}
 
 	.left-input__bill, .left-input__person {
     	background-position: 15px 15px;
-		height: 51px;
-		font-size: 20px;
+		height: 45px;
+		font-size: 1.5rem;
 		min-width: 240px;
 	}
 
@@ -319,8 +353,17 @@ footer {
 		gap: .9rem;
 	}
 
+	.tip-button {
+		padding: 0.625rem;
+		font-size: 1.5rem;
+	}
+
+	.container-result {
+		margin: 1rem 0rem 1.5rem;
+	}
+
 	.container-subtitle {
-		margin-top: 25px;
+		margin: 0px;
 	}
 
 	.total-box__subtitle {
@@ -328,10 +371,12 @@ footer {
 	}
 
 	.tip-amount, .total {
-		font-size: 25px;
+		font-size: 2rem;
 	}
 
 	.button-reset {
-		margin-top: 40px;
+		padding: 0.8rem;
+		font-size: 1.25rem;
 	}
+
 }
